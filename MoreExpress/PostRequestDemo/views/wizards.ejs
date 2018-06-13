@@ -1,0 +1,10 @@
+<h1>Join Hogwarts</h1>
+
+<% wizards.forEach(function(wizard){ %>
+    <li><%= wizard %></li>
+<% }); %>
+
+<form action="/addwizard" method="POST">
+    <input type ="text" name="newwizard" placeholder="name">
+    <button>Wizard wants to join Hogwarts</button>
+</form>

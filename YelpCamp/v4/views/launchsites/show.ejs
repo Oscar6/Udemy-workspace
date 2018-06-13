@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<h1><%=launchsite.name%></h1>
+
+<img src="<%= launchsite.image %>">
+
+<p><%= launchsite.description %></p>
+
+<p>
+    <a class="btn btn-success" href="/launchsites/<%= launchsite._id %>/comments/new">Add New Comment</a>
+</p>
+
+<% launchsite.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %>
+    </p>
+<% }) %>
+<% include ../partials/footer %>
